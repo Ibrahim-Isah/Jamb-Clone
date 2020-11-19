@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Jamb clone</title>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <link rel="stylesheet" href="jamb.css">
+    </head>
+    <body>
+        <div id="container">
+            <div class="logo">
+                <a><img src="logo_jamb.png" alt="logo"></a>
+            </div>
+            <div class="form-area">
+                <form>
+                    <p style="font-size: 20px;
+                    ">
+                        Login to your portal
+                    </p>
+                    <div class="error">
+                        <span style="color:red;">Enter your password and Email Address correctly</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"></label>
+                        <div class="input-icon">
+                            <i class="fa fa-envelope">
+                                ::before
+                            </i>
+                            <input type="email" id="email" placeholder="e-Mail Address" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password"></label>
+                        <div class="input-icon">
+                            <i class="fa fa-lock"> ::before</i>
+                            <input type="password" id="password" placeholder="Password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-action">
+                        <input type="submit" id="submit" class="btn" value="Login"> 
+                    </div>
+                    <div class="create">
+                        <p>Don't have an account yet?</p>
+                        <a href="#" class="create-link btn"
+                        style="text-decoration: none;">Create account</a>
+                    </div>
+                    <div class="forgot">
+                        <p style="font-size: 20px;">Forgot your password?</p>
+                        <p>Click <a style="
+                            padding: 5px; 
+                            color: white; 
+                            background-color: rgb(113, 217, 221);" href="#">Here</a> to reset your password</p>
+                    </div>
+                </form>
+                
+            </div>
+            <div class="footer">
+                <p style="color: rgb(32, 156, 32); 
+                text-align: center;
+                ">2020 &copy; Joint Admissions and Matriculation Board (JAMB)</p>
+            </div>
+        </div>
+        <script>
+            //background slide
+            let i = 0;
+            let images = [];
+            let time = 3000;
+            let pics = document.querySelector('body');
+
+            images[0] = "1.jpg";
+            images[1] = "2.jpg";
+
+            function changebg(){
+                pics.style.backgroundImage = images[i];
+
+                if(i < images.length -1){
+                    i++;
+                } else {
+                    i = 0;
+                }
+            }
+
+            setTimeout("changebg()" , time);
+
+            window.onload = changebg;
+        </script>
+    </body>
+</html>
